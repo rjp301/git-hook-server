@@ -1,11 +1,11 @@
-import express from "express";
-import bodyParser from "body-parser";
+const express = require("express");
+const bodyParser = require("body-parser");
 
-import path from "path";
-import fs from "fs";
+const path = require("path");
+const fs = require("fs");
 
-import dotenv from "dotenv";
-import exec_process from "./exec_process.js";
+const dotenv = require("dotenv");
+const exec_process = require("./exec_process.js");
 dotenv.config();
 
 const PORT = process.env.PORT || 3000;

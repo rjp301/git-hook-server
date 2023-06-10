@@ -1,6 +1,6 @@
-import { exec } from "child_process";
+const { exec } = require("child_process");
 
-export default function exec_process(command) {
+function exec_process(command) {
   return new Promise((resolve, reject) => {
     exec(command, (error, stdout, stderr) => {
       if (error) {
@@ -15,3 +15,5 @@ export default function exec_process(command) {
     });
   });
 }
+
+module.exports = exec_process;
