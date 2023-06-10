@@ -8,7 +8,7 @@ function exec_process(command) {
         return;
       }
       if (stderr) {
-        reject(`stderr: ${stderr}`);
+        resolve(`stderr: ${stderr}`);
         return;
       }
       resolve(`stdout: ${stdout}`);
