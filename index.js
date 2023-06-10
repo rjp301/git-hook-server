@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express from "express";
 import bodyParser from "body-parser";
 
 import path from "path";
@@ -15,11 +15,11 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (req, res) => {
   res.json({ version: "1.0.0" });
 });
 
-app.post("/", async (req: Request, res: Response) => {
+app.post("/", async (req, res) => {
   console.log("----------------");
 
   const repoName = req.body.repository.name;
