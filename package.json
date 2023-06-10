@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "npx nodemon server.ts"
+    "serve": "npx nodemon src/server.ts",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
