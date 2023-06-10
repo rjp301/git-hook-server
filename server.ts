@@ -20,12 +20,16 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.post("/", async (req: Request, res: Response) => {
-  console.log("----------------")
+  console.log("----------------");
+
   const repoName = req.body.repository.name;
   if (!repoName) {
     console.log("repo name not specified");
     return res.end();
   }
+
+  console.log(req.body.repository.name);
+  console.log(new Date(req.body.repository.pushed_at * 1000));
 
   const repoPath = path.join(REPO_DIR, repoName);
   const isDir = fs.existsSync(repoPath) && fs.lstatSync(repoPath).isDirectory();
